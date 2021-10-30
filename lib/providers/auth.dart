@@ -67,6 +67,7 @@ class Auth with ChangeNotifier {
         throw HttpException(resData["message"]["message"].toString());
       }
     } catch (error) {
+      print("error $error");
       throw error;
     }
   }
@@ -154,8 +155,10 @@ class Auth with ChangeNotifier {
         'phoneNumber': user.phoneNumber,
         'profilePhoto': user.profilePhoto,
       });
+      print("we want");
       prefs.setString("userData", userData);
     } catch (error) {
+      print("error $error");
       throw error;
     }
   }
