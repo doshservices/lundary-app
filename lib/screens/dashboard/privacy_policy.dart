@@ -87,14 +87,25 @@ class PrivacyPolicyScreen extends StatelessWidget {
                     text:
                         " These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users’ movement on the website, and gathering demographic information")
               ])),
+              SizedBox(
+                height: 20,
+              ),
               Text(
                 "Cookies and Web Beacon",
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
               ),
-              Text(
-                  """Like any other website, nathansdrycleaners.com uses ‘cookies’. These cookies are used to store information including visitors’ preferences, and the pages
-                   on the website that the visitor accessed or visited. The information is used to optimize the users’ experience by
-                   customizing our web page content based on visitors’ browser type and/or other information."""),
+              RichText(
+                  text: TextSpan(children: [
+                TextSpan(
+                    text:
+                        "Like any other website, nathansdrycleaners.com uses ‘cookies’. These cookies are used to store information including visitors’ preferences, and the pages"),
+                TextSpan(
+                    text:
+                        "  on the website that the visitor accessed or visited. The information is used to optimize the users’ experience by"),
+                TextSpan(
+                    text:
+                        " customizing our web page content based on visitors’ browser type and/or other information")
+              ])),
               SizedBox(
                 height: 20,
               ),
@@ -102,22 +113,37 @@ class PrivacyPolicyScreen extends StatelessWidget {
                 "Advertising Partners Privacy Policies",
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
               ),
-              Text(
-                  """You may consult this list to find the Privacy Policy for each of the advertising partners of nathansdrycleaners.com.
-      
-      Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on nathansdrycleaners.com, which are sent directly to users’ browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
-      
-      Note that nathansdrycleaners.com has no access to or control over these cookies that are used by third-party advertisers."""),
+              RichText(
+                  text: TextSpan(children: [
+                TextSpan(
+                    text:
+                        "You may consult this list to find the Privacy Policy for each of the advertising partners of nathansdrycleaners.com."),
+                TextSpan(
+                    text:
+                        "  Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on nathansdrycleaners.com, which are sent directly to users’ browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit."),
+                TextSpan(
+                    text:
+                        " Note that nathansdrycleaners.com has no access to or control over these cookies that are used by third-party advertisers.")
+              ])),
+              SizedBox(
+                height: 20,
+              ),
               Text(
                 "Third Party Privacy Policy",
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
               ),
-              Text(
-                  """nathansdrycleaners.com’s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.
-      
-      You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers’ respective websites.
-      
-      """),
+              RichText(
+                  text: TextSpan(children: [
+                TextSpan(
+                    text:
+                        "nathansdrycleaners.com’s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party"),
+                TextSpan(
+                    text:
+                        " ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options."),
+                TextSpan(
+                    text:
+                        "   You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers’ respective websites.")
+              ])),
               SizedBox(
                 height: 20,
               ),
@@ -125,10 +151,18 @@ class PrivacyPolicyScreen extends StatelessWidget {
                 "Children's Information",
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
               ),
-              Text(
-                  """Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
-      
-      nathansdrycleaners.com does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.""")
+              RichText(
+                  text: TextSpan(children: [
+                TextSpan(
+                    text:
+                        "Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in,"),
+                TextSpan(
+                    text:
+                        " and/or monitor and guide their online activity. nathansdrycleaners.com does not knowingly collect any Personal Identifiable Information from children under the age of 13."),
+                TextSpan(
+                    text:
+                        "If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.")
+              ])),
             ],
           ),
         ),
