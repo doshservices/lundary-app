@@ -21,7 +21,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   UserModel userModel = UserModel();
   bool _termsAndCondition = false;
   TextEditingController _date = new TextEditingController();
-
+  bool agree = false;
   bool _isLoading = false;
   bool _obscurePassword = true;
 
@@ -213,16 +213,43 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     },
                   ),
                   SizedBox(
+                    height: 20,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(18.0),
+                    child: Row(
+                      children: [
+                        Material(
+                          child: Checkbox(
+                              activeColor: kPrimaryColor,
+                              //  checkColor: kPrimaryColor,
+                              value: agree,
+                              onChanged: (value) {
+                                setState(() {
+                                  agree = value ?? false;
+                                });
+                              }),
+                        ),
+                        Text(
+                          'I accept Terms & Conditions',
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(color: kPrimaryColor),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
                     height: 40,
                   ),
                   RoundedRaisedButton(
-                    title: "Sign up",
-                    width: MediaQuery.of(context).size.width,
-                    isLoading: _isLoading,
-                    onPress: () async {
-                      _submit();
-                    },
-                  ),
+                      title: "Sign up",
+                      width: MediaQuery.of(context).size.width,
+                      isLoading: _isLoading,
+                      onPress: agree
+                          ? () async {
+                              _submit();
+                            }
+                          : null),
                   SizedBox(
                     height: 20,
                   ),
