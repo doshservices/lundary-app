@@ -18,6 +18,7 @@ import 'package:laundry_app/screens/dashboard/mybag.dart';
 import 'package:laundry_app/screens/dashboard/mylocations.dart';
 import 'package:laundry_app/screens/dashboard/notifications.dart';
 import 'package:laundry_app/screens/dashboard/order_detail.dart';
+import 'package:laundry_app/screens/dashboard/privacy_policy.dart';
 import 'package:laundry_app/screens/dashboard/refer.dart';
 import 'package:laundry_app/screens/dashboard/schedule_pickup.dart';
 import 'package:laundry_app/screens/dashboard/special_order.dart';
@@ -92,6 +93,7 @@ class MyApp extends StatelessWidget {
                     initialIndex: 0,
                   ),
               kAccountInfoScreen: (ctx) => AccountInfoScreen(),
+              kPrivacyPolicy: (ctx) => PrivacyPolicyScreen(),
               kMyLocationsScreen: (ctx) => MyLocationsScreen(),
               kFeedbackScreen: (ctx) => FeedbackScreen(),
               kReferScreen: (ctx) => ReferScreen(),

@@ -94,6 +94,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                           Divider(),
                           ListTile(
+                            leading: Image.asset("assets/images/Object.png",
+                                height: 20, width: 20),
+                            minLeadingWidth: 20,
+                            title: Text("Privacy Policy"),
+                            onTap: () {
+                              Navigator.of(context).pushNamed(kPrivacyPolicy);
+                            },
+                          ),
+                          Divider(),
+                          ListTile(
                             leading: Image.asset(
                               "assets/images/Combined shape 1811.png",
                               width: 20,

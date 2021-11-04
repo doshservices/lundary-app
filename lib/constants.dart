@@ -12,6 +12,7 @@ const kAccountInfoScreen = "accountinfoscreen";
 const kMyLocationsScreen = "mylocationsscreen";
 const kFeedbackScreen = "feedbackscreen";
 const kReferScreen = "referscreen";
+const kPrivacyPolicy = 'privacypolicy';
 const kChangePasswordScreen = "changepasswordscreen";
 const kSpecialOrderScreen = "specialorderscreen";
 const kNotificationScreen = "notificationscreen";
