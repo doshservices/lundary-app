@@ -43,14 +43,24 @@ class MyApp extends StatelessWidget {
           create: (ctx) => Auth(),
         ),
         ChangeNotifierProxyProvider<Auth, ServiceProvider>(
-            update: (ctx, auth, previousServiceProvider) {
-          return ServiceProvider(
+          //this is what I want to try
+          create: (ctx) => ServiceProvider('', ''),
+
+          //original code present
+          update: (ctx, auth, previousServiceProvider) {
+            return ServiceProvider(
               auth.token,
               previousServiceProvider != null
                   ? previousServiceProvider.state
-                  : "LAGOS");
-        }),
+                  : "LAGOS",
+            );
+          },
+        ),
         ChangeNotifierProxyProvider<Auth, CartProvider>(
+          //this is what I want to try
+          create: (ctx) => CartProvider('', {}, 0.0),
+
+          //original code present
           update: (ctx, auth, previousCartProvider) {
             return CartProvider(
                 auth.token,

@@ -75,7 +75,7 @@ class _MakePaymentState extends State<MakePayment> {
                           return AlertDialog(
                             content: Text("Order Successful"),
                             actions: [
-                              RaisedButton(
+                              ElevatedButton(
                                 child: Text("OK"),
                                 onPressed: () {
                                   Navigator.of(context).pop();
@@ -98,7 +98,7 @@ class _MakePaymentState extends State<MakePayment> {
                           return AlertDialog(
                             content: Text("$error"),
                             actions: [
-                              RaisedButton(
+                              ElevatedButton(
                                 child: Text("OK"),
                                 onPressed: () {
                                   Navigator.of(context).pop();

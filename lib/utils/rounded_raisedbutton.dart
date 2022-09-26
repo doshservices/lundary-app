@@ -26,8 +26,7 @@ class RoundedRaisedButton extends StatelessWidget {
     return Container(
       height: 50,
       width: width,
-      child: RaisedButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+      child: ElevatedButton(
         child: isLoading
             ? Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -81,8 +80,13 @@ class RoundedRaisedButton extends StatelessWidget {
                           : Text(""),
                     ],
                   ),
-        color: buttonColor,
-        disabledColor: Theme.of(context).primaryColor.withOpacity(0.7),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: buttonColor,
+          disabledBackgroundColor:
+              Theme.of(context).primaryColor.withOpacity(0.7),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        ),
         onPressed: isLoading ? null : this.onPress,
       ),
     );

@@ -140,7 +140,7 @@ class _WalkThroughState extends State<WalkThrough>
                             },
                           ),
                         ),
-                        FlatButton(
+                        TextButton(
                             onPressed: () {
                               _pageController.animateToPage(2,
                                   duration: Duration(seconds: 1),

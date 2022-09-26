@@ -682,7 +682,9 @@ class _NumberInputWithIncrementDecrementState
                   style: widget.style,
                   enabled: widget.enabled,
                   textAlign: TextAlign.center,
-                  autovalidate: widget.autovalidate,
+                  autovalidateMode: widget.autovalidate
+                      ? AutovalidateMode.onUserInteraction
+                      : AutovalidateMode.disabled,
                   decoration: widget.numberFieldDecoration ??
                       InputDecoration(
                           border: OutlineInputBorder(

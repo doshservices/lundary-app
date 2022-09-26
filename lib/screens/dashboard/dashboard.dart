@@ -56,17 +56,17 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
               style: TextStyle(color: Colors.black),
             ),
             actions: [
-              FlatButton(
-                child: Text("NO"),
+              TextButton(
                 onPressed: () {
                   return Navigator.of(context).pop(false);
                 },
+                child: Text('NO'),
               ),
-              FlatButton(
-                child: Text("YES"),
+              TextButton(
                 onPressed: () {
                   return Navigator.of(context).pop(true);
                 },
+                child: Text('YES'),
               ),
             ],
           ),
@@ -105,12 +105,7 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                   height: 16,
                   fit: BoxFit.contain,
                 ),
-                title: Padding(
-                  padding: const EdgeInsets.only(top: 5.0),
-                  child: Text(
-                    "Home",
-                  ),
-                ),
+                label: 'Home',
                 activeIcon: Image.asset("assets/images/Group 3.png",
                     height: 20,
                     fit: BoxFit.contain,
@@ -123,12 +118,7 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                   fit: BoxFit.contain,
                   color: Colors.grey,
                 ),
-                title: Padding(
-                  padding: const EdgeInsets.only(top: 5.0),
-                  child: Text(
-                    "Request",
-                  ),
-                ),
+                label: 'Request',
                 activeIcon: Image.asset("assets/images/ArrowsLeftRight.png",
                     height: 20,
                     fit: BoxFit.contain,
@@ -141,12 +131,7 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                   fit: BoxFit.contain,
                   color: Colors.grey,
                 ),
-                title: Padding(
-                  padding: const EdgeInsets.only(top: 5.0),
-                  child: Text(
-                    "Bookings",
-                  ),
-                ),
+                label: 'Bookings',
                 activeIcon: Image.asset("assets/images/Combined shape 1807.png",
                     height: 20,
                     fit: BoxFit.contain,
@@ -159,12 +144,7 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
                   fit: BoxFit.contain,
                   color: Colors.grey,
                 ),
-                title: Padding(
-                  padding: const EdgeInsets.only(top: 5.0),
-                  child: Text(
-                    "Profile",
-                  ),
-                ),
+                label: 'Profile',
                 activeIcon: Image.asset("assets/images/Combined shape 927.png",
                     height: 20,
                     fit: BoxFit.contain,
