@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:laundry_app/constants.dart';
 import 'package:laundry_app/models/http_exception.dart';
-import 'package:laundry_app/utils/custom_textformfield.dart';
 import 'package:laundry_app/utils/rounded_raisedbutton.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:get/get.dart';
@@ -24,9 +23,9 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
   String currentText = "";
   bool _isLoading = false;
   StreamController<ErrorAnimationType> errorController;
-  bool _isDigitComplete = false;
+  // bool _isDigitComplete = false;
   bool _isResendingOtp = false;
-  bool _isValidatingOtp = false;
+  // bool _isValidatingOtp = false;
   UserModel user = UserModel();
 
   Future<void> _submit() async {
@@ -92,6 +91,12 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
   }
 
   @override
+  void dispose() {
+    errorController.close();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final arguments =
         ModalRoute.of(context).settings.arguments as Map<String, dynamic>;
@@ -154,15 +159,15 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 obscuringCharacter: '*',
                 blinkWhenObscuring: true,
                 animationType: AnimationType.fade,
-                validator: (v) {
-                  // if (v.length < 6) {
-                  //   setState(() {
-                  //     _isDigitComplete = false;
-                  //   });
-                  // } else {
-                  //   return null;
-                  // }
-                },
+                // validator: (v) {
+                //   // if (v.length < 6) {
+                //   //   setState(() {
+                //   //     _isDigitComplete = false;
+                //   //   });
+                //   // } else {
+                //   //   return null;
+                //   // }
+                // },
                 pinTheme: PinTheme(
                   shape: PinCodeFieldShape.underline,
                   inactiveColor: Colors.grey,
@@ -191,25 +196,25 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                 //   )
                 // ],
                 onCompleted: (v) async {
-                  print("Completed");
-                  setState(() {
-                    _isDigitComplete = true;
-                  });
+                  // print("Completed");
+                  // setState(() {
+                  //   _isDigitComplete = true;
+                  // });
                   // await signup(context);
                 },
                 // onTap: () {
                 //   print("Pressed");
                 // },
                 onChanged: (value) {
-                  print(value);
-                  setState(() {
-                    currentText = value;
-                  });
-                  if (value.length < 6) {
-                    setState(() {
-                      _isDigitComplete = false;
-                    });
-                  }
+                  // print(value);
+                  // setState(() {
+                  //   currentText = value;
+                  // });
+                  // if (value.length < 6) {
+                  //   setState(() {
+                  //     _isDigitComplete = false;
+                  //   });
+                  // }
                 },
                 beforeTextPaste: (text) {
                   print("Allowing to paste $text");

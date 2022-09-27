@@ -16,11 +16,11 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   final GlobalKey<FormState> _registerFormKey = GlobalKey();
 
-  final _passwordController = TextEditingController();
+  // final _passwordController = TextEditingController();
 
   UserModel userModel = UserModel();
-  bool _termsAndCondition = false;
-  TextEditingController _date = new TextEditingController();
+  // bool _termsAndCondition = false;
+  // TextEditingController _date = new TextEditingController();
   bool agree = false;
   bool _isLoading = false;
   bool _obscurePassword = true;

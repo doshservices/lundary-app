@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_app/utils/rounded_raisedbutton.dart';
 import './widgets/slide_dots.dart';
-import 'dart:async';
 import 'package:laundry_app/constants.dart';
 
 class WalkThrough extends StatefulWidget {
@@ -12,8 +11,8 @@ class WalkThrough extends StatefulWidget {
 class _WalkThroughState extends State<WalkThrough>
     with SingleTickerProviderStateMixin {
   int _currentPage = 0;
-  double _welcomeTextTopPadding = 60;
-  double _logoWidth = 0;
+  // double _welcomeTextTopPadding = 60;
+  // double _logoWidth = 0;
   final PageController _pageController = PageController(initialPage: 0);
   AnimationController buttonAnimationController;
 
@@ -38,14 +37,12 @@ class _WalkThroughState extends State<WalkThrough>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     _pageController.dispose();
   }
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     // //for logo

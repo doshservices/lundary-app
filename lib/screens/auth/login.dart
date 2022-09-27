@@ -13,7 +13,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final GlobalKey<FormState> _loginFormKey = new GlobalKey<FormState>();
-  bool _rememberMe = false;
+  // bool _rememberMe = false;
   bool _isLoading = false;
   String userEmail, userPassword;
   String errMsg = "";
