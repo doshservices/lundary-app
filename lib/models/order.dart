@@ -1,5 +1,4 @@
 import 'package:laundry_app/models/cart.dart';
-import 'package:laundry_app/screens/dashboard/dry_cleaning.dart';
 
 class OrderModel {
   String paymentMethod,

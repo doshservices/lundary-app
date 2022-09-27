@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
-import 'package:laundry_app/constants.dart';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -11,7 +9,6 @@ import 'package:laundry_app/models/notifications.dart';
 import 'package:laundry_app/models/order.dart';
 import 'package:laundry_app/models/service_model.dart';
 import 'package:laundry_app/models/take_order.dart';
-import 'package:laundry_app/screens/dashboard/dry_cleaning.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ServiceProvider with ChangeNotifier {

@@ -1,9 +1,5 @@
-import 'dart:convert';
 import 'package:flutter/cupertino.dart';
-import 'package:http/http.dart' as http;
 import './../models/cart.dart';
-import './../models/http_exception.dart';
-import 'package:laundry_app/config.dart';
 
 class CartProvider with ChangeNotifier {
   String token;

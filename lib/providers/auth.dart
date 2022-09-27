@@ -1,8 +1,5 @@
 import 'dart:convert';
 import 'dart:async';
-import 'dart:io';
-
-import 'dart:io' as Io;
 
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
@@ -15,8 +12,8 @@ import '../config.dart' as config;
 
 class Auth with ChangeNotifier {
   String _token;
-  String _accessTokenType;
-  DateTime _expiryDate;
+  // String _accessTokenType;
+  // DateTime _expiryDate;
   String _userId;
   String fullName, phoneNumber, userEmail;
   UserModel user = UserModel();
@@ -509,7 +506,7 @@ class Auth with ChangeNotifier {
         },
         body: data,
       );
-      var resData = jsonDecode(response.body);
+      // var resData = jsonDecode(response.body);
 
       print(response.body);
 

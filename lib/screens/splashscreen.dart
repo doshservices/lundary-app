@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:laundry_app/constants.dart';
 
 class SplashScreen extends StatelessWidget {
   @override
