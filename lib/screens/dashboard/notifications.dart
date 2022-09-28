@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_app/models/notifications.dart';
 import 'package:laundry_app/providers/service_provider.dart';
-import 'package:laundry_app/utils/custom_textformfield.dart';
-import 'package:laundry_app/utils/rounded_raisedbutton.dart';
 import 'package:provider/provider.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -45,7 +43,7 @@ class NotificationScreen extends StatelessWidget {
 }
 
 class NotificationItem extends StatelessWidget {
-  NotificationModel notification;
+  final NotificationModel notification;
   NotificationItem({this.notification});
 
   @override

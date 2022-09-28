@@ -21,7 +21,6 @@ class _MakePaymentState extends State<MakePayment> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
   }
@@ -60,7 +59,7 @@ class _MakePaymentState extends State<MakePayment> {
               if (link.host == "nathansdrycleaners.com") {
                 dynamic ref = link.queryParameters["trxref"];
                 if (_isFirstTime) {
-                  AppAlertDialog.ShowDialog(context, "Verifying payment");
+                  AppAlertDialog.showMyDialog(context, "Verifying payment");
                   setState(() {
                     _isFirstTime = false;
                   });

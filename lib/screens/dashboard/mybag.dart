@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:laundry_app/constants.dart';
 import 'package:laundry_app/models/cart.dart';
 import 'package:laundry_app/providers/cart.dart';
-import 'package:laundry_app/screens/dashboard/quantity_controller.dart';
-import 'package:laundry_app/utils/custom_textformfield.dart';
-import 'package:laundry_app/utils/rounded_raisedbutton.dart';
-import 'package:expandable/expandable.dart';
 import 'package:provider/provider.dart';
 import 'package:get/get.dart';
 
@@ -171,9 +167,9 @@ class _MyBagScreenState extends State<MyBagScreen> {
 }
 
 class CartItem extends StatelessWidget {
-  List<CartModel> cart;
+  final List<CartModel> cart;
   CartItem({this.title, this.cart});
-  String title;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
