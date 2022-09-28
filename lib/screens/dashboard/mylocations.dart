@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:laundry_app/constants.dart';
 import 'package:laundry_app/models/address_model.dart';
 import 'package:laundry_app/providers/auth.dart';
-import 'package:laundry_app/providers/service_provider.dart';
-import 'package:laundry_app/utils/custom_textformfield.dart';
-import 'package:laundry_app/utils/rounded_raisedbutton.dart';
 import 'package:provider/provider.dart';
 
 class MyLocationsScreen extends StatefulWidget {
@@ -77,8 +74,8 @@ class _MyLocationsScreenState extends State<MyLocationsScreen> {
 }
 
 class LocationItem extends StatelessWidget {
-  AddressModel address;
-  Function onEdit;
+  final AddressModel address;
+  final Function onEdit;
   LocationItem({this.address, this.onEdit});
 
   @override

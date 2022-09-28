@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundry_app/constants.dart';
 import 'package:laundry_app/models/order.dart';
-import 'package:laundry_app/utils/custom_textformfield.dart';
-import 'package:laundry_app/utils/rounded_raisedbutton.dart';
 import 'package:expandable/expandable.dart';
 
 class OrderDetailScreen extends StatefulWidget {
@@ -405,7 +403,7 @@ class OrderItem extends StatelessWidget {
   OrderItem({
     this.title,
   });
-  String title;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -454,7 +452,7 @@ class OrderItem extends StatelessWidget {
               ),
             ],
           ),
-          tapHeaderToExpand: true,
+          theme: ExpandableThemeData(tapBodyToExpand: true),
         ),
         Divider(),
       ],
