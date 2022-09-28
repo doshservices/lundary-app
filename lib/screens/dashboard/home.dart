@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:laundry_app/constants.dart';
 import 'package:laundry_app/models/order.dart';
 import 'package:laundry_app/providers/auth.dart';
@@ -37,7 +36,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void didChangeDependencies() async {
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
     if (_isInit) {
       await Provider.of<ServiceProvider>(context, listen: false).getState();
@@ -383,7 +381,7 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class ActiveOrderItem extends StatelessWidget {
-  OrderModel order;
+  final OrderModel order;
   ActiveOrderItem({this.order});
 
   @override
