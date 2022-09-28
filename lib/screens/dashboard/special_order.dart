@@ -1,11 +1,6 @@
-import 'dart:convert';
-import 'dart:io';
-import 'dart:math' as Math;
-
 import 'package:date_time_picker/date_time_picker.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:laundry_app/constants.dart';
 import 'package:laundry_app/models/address_model.dart';
@@ -26,19 +21,19 @@ class _SpecialOrderScreenState extends State<SpecialOrderScreen> {
 
   PageController _uploadPageController = PageController(initialPage: 0);
 
-  GlobalKey<FormState> _page1FormKey = GlobalKey();
+  // GlobalKey<FormState> _page1FormKey = GlobalKey();
   GlobalKey<FormState> _page2FormKey = GlobalKey();
   GlobalKey<FormState> _page3FormKey = GlobalKey();
-  GlobalKey<FormState> _page4FormKey = GlobalKey();
+  // GlobalKey<FormState> _page4FormKey = GlobalKey();
   GlobalKey<FormState> _addressFormKey = GlobalKey();
-  String _selectedFeatureType = "";
-  String _selectedMaritalStatus = "";
-  String _selectedPropertyCondition = "";
+  // String _selectedFeatureType = "";
+  // String _selectedMaritalStatus = "";
+  // String _selectedPropertyCondition = "";
   List<Widget> pages;
   int pageIndex = 0;
-  bool _isLoading = false;
-  File _signatureImage, _idImage;
-  String _signatureImageExtension, _idImageExtension;
+  // bool _isLoading = false;
+  // File _signatureImage, _idImage;
+  // String _signatureImageExtension, _idImageExtension;
   var base64SignatureImage, base64IdImage;
   List<AddressModel> addresses = [];
   AddressModel address = AddressModel();
@@ -192,92 +187,92 @@ class _SpecialOrderScreenState extends State<SpecialOrderScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final arguments =
-        ModalRoute.of(context).settings.arguments as Map<String, dynamic>;
-    final authProvider = Provider.of<Auth>(context);
+    // final arguments =
+    //     ModalRoute.of(context).settings.arguments as Map<String, dynamic>;
+    // final authProvider = Provider.of<Auth>(context);
 
     //  print(countrydata);
 
-    List<DropdownMenuItem> timeItems = [
-      DropdownMenuItem(
-        child: Text(
-          "Select Time",
-        ),
-        value: "",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "12:00 A.M - 02:00 A.M",
-        ),
-        value: "12:00 A.M - 02:00 A.M",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "02:00 A.M - 04:00 A.M",
-        ),
-        value: "02:00 A.M - 04:00 A.M",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "04:00 A.M - 06:00 A.M",
-        ),
-        value: "04:00 A.M - 06:00 A.M",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "06:00 A.M - 08:00 A.M",
-        ),
-        value: "06:00 A.M - 08:00 A.M",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "08:00 A.M - 10:00 A.M",
-        ),
-        value: "08:00 A.M - 10:00 A.M",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "10:00 A.M - 12:00 P.M",
-        ),
-        value: "10:00 A.M - 12:00 P.M",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "12:00 P.M - 02:00 P.M",
-        ),
-        value: "12:00 P.M - 02:00 P.M",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "02:00 P.M - 04:00 P.M",
-        ),
-        value: "02:00 P.M - 04:00 P.M",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "04:00 P.M - 06:00 P.M",
-        ),
-        value: "04:00 P.M - 06:00 P.M",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "06:00 P.M - 08:00 P.M",
-        ),
-        value: "06:00 P.M - 08:00 P.M",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "08:00 P.M - 10:00 P.M",
-        ),
-        value: "08:00 P.M - 10:00 P.M",
-      ),
-      DropdownMenuItem(
-        child: Text(
-          "10:00 P.M - 12:00 A.M",
-        ),
-        value: "10:00 P.M - 12:00 A.M",
-      ),
-    ];
+    // List<DropdownMenuItem> timeItems = [
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "Select Time",
+    //     ),
+    //     value: "",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "12:00 A.M - 02:00 A.M",
+    //     ),
+    //     value: "12:00 A.M - 02:00 A.M",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "02:00 A.M - 04:00 A.M",
+    //     ),
+    //     value: "02:00 A.M - 04:00 A.M",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "04:00 A.M - 06:00 A.M",
+    //     ),
+    //     value: "04:00 A.M - 06:00 A.M",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "06:00 A.M - 08:00 A.M",
+    //     ),
+    //     value: "06:00 A.M - 08:00 A.M",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "08:00 A.M - 10:00 A.M",
+    //     ),
+    //     value: "08:00 A.M - 10:00 A.M",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "10:00 A.M - 12:00 P.M",
+    //     ),
+    //     value: "10:00 A.M - 12:00 P.M",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "12:00 P.M - 02:00 P.M",
+    //     ),
+    //     value: "12:00 P.M - 02:00 P.M",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "02:00 P.M - 04:00 P.M",
+    //     ),
+    //     value: "02:00 P.M - 04:00 P.M",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "04:00 P.M - 06:00 P.M",
+    //     ),
+    //     value: "04:00 P.M - 06:00 P.M",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "06:00 P.M - 08:00 P.M",
+    //     ),
+    //     value: "06:00 P.M - 08:00 P.M",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "08:00 P.M - 10:00 P.M",
+    //     ),
+    //     value: "08:00 P.M - 10:00 P.M",
+    //   ),
+    //   DropdownMenuItem(
+    //     child: Text(
+    //       "10:00 P.M - 12:00 A.M",
+    //     ),
+    //     value: "10:00 P.M - 12:00 A.M",
+    //   ),
+    // ];
 
     Widget page1 = _isInit
         ? Center(
@@ -933,20 +928,20 @@ class _SpecialOrderScreenState extends State<SpecialOrderScreen> {
       ),
     );
 
-    Widget page4 = SingleChildScrollView(
-      child: Container(
-        padding: EdgeInsets.all(20),
-        child: Form(
-          key: _page4FormKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 5),
-            ],
-          ),
-        ),
-      ),
-    );
+    // Widget page4 = SingleChildScrollView(
+    //   child: Container(
+    //     padding: EdgeInsets.all(20),
+    //     child: Form(
+    //       key: _page4FormKey,
+    //       child: Column(
+    //         crossAxisAlignment: CrossAxisAlignment.start,
+    //         children: [
+    //           SizedBox(height: 5),
+    //         ],
+    //       ),
+    //     ),
+    //   ),
+    // );
 
     pages = [
       page1,
@@ -1092,9 +1087,9 @@ class _SpecialOrderScreenState extends State<SpecialOrderScreen> {
 
 class TrackerWidget extends StatelessWidget {
   TrackerWidget({this.title, this.filled, this.icon});
-  String title;
-  bool filled;
-  String icon;
+  final String title;
+  final bool filled;
+  final String icon;
 
   @override
   Widget build(BuildContext context) {

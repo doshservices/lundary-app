@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:laundry_app/constants.dart';
 import 'package:laundry_app/models/order.dart';
 import 'package:laundry_app/providers/auth.dart';
@@ -106,7 +105,7 @@ class _RequestScreenState extends State<RequestScreen> {
 }
 
 class RequestItem extends StatelessWidget {
-  OrderModel order;
+  final OrderModel order;
   RequestItem({this.order});
 
   @override
