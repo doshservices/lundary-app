@@ -42,19 +42,19 @@ class _AccountInfoScreenState extends State<AccountInfoScreen> {
   //       print(postFiles.length);
   //     });
 
-  Future getImagechris(ImgSource source) async {
-    var image = await ImagePickerGC.pickImage(
-      context: context,
-      source: source,
-      maxHeight: 400,
-      maxWidth: 300,
-      imageQuality: 100,
-      cameraIcon: Icon(
-        Icons.add,
-        color: Colors.red,
-      ), //cameraIcon and galleryIcon can change. If no icon provided default icon will be present
-    );
-  }
+  // Future getImagechris(ImgSource source) async {
+  //   var image = await ImagePickerGC.pickImage(
+  //     context: context,
+  //     source: source,
+  //     maxHeight: 400,
+  //     maxWidth: 300,
+  //     imageQuality: 100,
+  //     cameraIcon: Icon(
+  //       Icons.add,
+  //       color: Colors.red,
+  //     ), //cameraIcon and galleryIcon can change. If no icon provided default icon will be present
+  //   );
+  // }
 
   Future getImage(ImgSource source) async {
     var image = await ImagePickerGC.pickImage(
@@ -112,7 +112,6 @@ class _AccountInfoScreenState extends State<AccountInfoScreen> {
 
   @override
   void didChangeDependencies() async {
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
     if (_isInit) {
       try {
