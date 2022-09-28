@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:laundry_app/constants.dart';
 import 'package:laundry_app/screens/dashboard/home.dart';
 import 'package:laundry_app/screens/dashboard/orders.dart';
 import 'package:laundry_app/screens/dashboard/profile.dart';
@@ -9,7 +7,7 @@ import 'package:laundry_app/screens/dashboard/request.dart';
 //pages
 
 class Dashboard extends StatefulWidget {
-  int initialIndex;
+  final int initialIndex;
 
   Dashboard({this.initialIndex = 2});
   @override
@@ -18,7 +16,7 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
   List<Map<String, dynamic>> _pages;
-  GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+  // GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
   int _selectedPageIndex = 0;
   void _selectPage(int index) {
     setState(() {
@@ -28,7 +26,6 @@ class _DashboardState extends State<Dashboard> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _selectedPageIndex = widget.initialIndex;
 
@@ -165,9 +162,9 @@ class BottomItem extends StatelessWidget {
       : _page = page,
         super(key: key);
 
-  int index, _page;
-  String iconUrl;
-  String title;
+  final int index, _page;
+  final String iconUrl;
+  final String title;
 
   @override
   Widget build(BuildContext context) {

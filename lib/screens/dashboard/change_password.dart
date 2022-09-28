@@ -16,7 +16,7 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey();
   String oldPassword = "";
   String newPassword = "";
-  bool _obscurePassword = true;
+  // bool _obscurePassword = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

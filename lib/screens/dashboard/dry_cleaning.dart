@@ -6,9 +6,6 @@ import 'package:laundry_app/providers/auth.dart';
 import 'package:laundry_app/providers/cart.dart';
 import 'package:laundry_app/providers/service_provider.dart';
 import 'package:laundry_app/screens/dashboard/quantity_controller.dart';
-import 'package:laundry_app/utils/custom_textformfield.dart';
-import 'package:laundry_app/utils/rounded_raisedbutton.dart';
-import 'package:expandable/expandable.dart';
 import 'package:provider/provider.dart';
 
 class DryCleaningScreen extends StatefulWidget {
@@ -304,7 +301,7 @@ class _DryCleaningScreenState extends State<DryCleaningScreen> {
 }
 
 class CartItem extends StatelessWidget {
-  ServiceModel service;
+  final ServiceModel service;
   CartItem({this.service});
 
   @override
