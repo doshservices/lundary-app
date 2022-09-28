@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import './number_increment_decrement.dart';
 
 class QuantityController extends StatelessWidget {
-  int initialValue;
-  Function onIncrement, onDecrement;
+  final int initialValue;
+  final Function onIncrement, onDecrement;
   QuantityController({this.initialValue, this.onIncrement, this.onDecrement});
 
   @override

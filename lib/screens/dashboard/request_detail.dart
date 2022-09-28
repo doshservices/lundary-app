@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:laundry_app/utils/custom_textformfield.dart';
-import 'package:laundry_app/utils/rounded_raisedbutton.dart';
 
 class RequestDetailScreen extends StatelessWidget {
   @override
