@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppAlertDialog {
-  static void ShowDialog(BuildContext context, String message) {
+  static void showMyDialog(BuildContext context, String message) {
     showDialog(
       context: context,
       barrierColor: Color.fromARGB(0XFF, 0X00, 0X58, 0X7A).withOpacity(0.7),

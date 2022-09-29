@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:laundry_app/constants.dart';
 
 class RoundedRaisedButton extends StatelessWidget {
-  bool isLoading;
-  String title;
-  Color titleColor, buttonColor;
-  IconData iconLeft, iconRight;
-  Widget imageIcon;
+  final bool isLoading;
+  final String title;
+  final Color titleColor, buttonColor;
+  final IconData iconLeft, iconRight;
+  final Widget imageIcon;
 
-  double width;
-  Function onPress;
+  final double width;
+  final Function onPress;
   RoundedRaisedButton(
       {this.title,
       this.onPress,
